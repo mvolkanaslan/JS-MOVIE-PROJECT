@@ -1,10 +1,10 @@
-function UI(){
+function UI() {
 
 }
 
-UI.prototype.addMovieToUI = (movie)=>{
-     let movie_list = document.getElementById("movies");
-     movie_list.insertAdjacentHTML("afterbegin",`<div class="card g-0 mt-3" >
+UI.prototype.addMovieToUI = (movie) => {
+    let movie_list = document.getElementById("movies");
+    movie_list.insertAdjacentHTML("afterbegin", `<div id=${movie.id} class="card g-0 mt-3" >
      <div class="row g-0">
        <div class="col-md-8">
          <img src="${movie.img_url}" class="img-fluid rounded-start" alt="..." style="width: 100%;">
@@ -25,10 +25,9 @@ UI.prototype.addMovieToUI = (movie)=>{
      </div>
    </div>`)
 }
-UI.prototype.deleteMovieFromUI = function(e){
-    let movieToDelete;
-    if(e.target.attributes["id"].value === "delete-movie"){
-        movieToDelete = e.target.parentElement.parentElement.parentElement.parentElement.parentElement;
-        movieToDelete.remove();
-    }
+
+
+// delete the movie from User Interface
+UI.prototype.deleteMovieFromUI = function (movieToDelete) {
+    movieToDelete.remove();
 }

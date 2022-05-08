@@ -1,0 +1,3 @@
+# JS-MOVIE-PROJECT
+A study of Basic Object oparetion
+Using Prototype, module...
